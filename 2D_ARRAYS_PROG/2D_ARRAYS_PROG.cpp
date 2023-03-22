@@ -84,17 +84,6 @@ void solve(int usage[ROWS][COLS])
     cout << '|' << setfill('-') << setw(CELLSIZE) << "" << "|" << setfill('-') << setw(CELLSIZE) << "" << "|" << setfill('-') << setw(CELLSIZE) << "" << "|" << setfill('-') << setw(CELLSIZE) << "" << '|' << setfill('-') << setw(CELLSIZE) << "" << '|' << endl;
 
 
-    /*
-    int cellSize = getMaxStr() + 2;
-
-    cout << '|' << setfill('-') << setw(cellSize) << "" << "|" << setfill('-') << setw(cellSize) << "" << "|" << setfill('-') << setw(cellSize) << "" << "|" << setfill('-') << setw(cellSize) << "" << '|' << endl;
-    cout << "|" << formatString("Code") << "|";
-    cout << formatString("Description") << "|";
-    cout << formatString("Price") << "|";
-    cout << formatString("Rate") << "|\n";
-    cout << '|' << setfill('-') << setw(cellSize) << "" << "|" << setfill('-') << setw(cellSize) << "" << "|" << setfill('-') << setw(cellSize) << "" << "|" << setfill('-') << setw(cellSize) << "" << '|' << endl;
-
-    */
 }
 
 int main()
