@@ -21,12 +21,30 @@
 
 using namespace std;
 
+// solution 
+void input(int usage[ROWS][COLS]);
+void solve(int usage[ROWS][COLS]);
+
+// util 
+void rowInput(string l, int usageRow[COLS]);
+string formatString(string str);
+
+
+int main()
+{
+    // init usage to 0
+    int usage[ROWS][COLS] = { 0 };
+    input(usage);
+    solve(usage);
+}
+
+
 void rowInput(string l, int usageRow[COLS])
 {
     stringstream stream = stringstream(l);
     for (int i = 0; i < COLS; i++)
         stream >> usageRow[i];
-    
+
 }
 
 void input(int usage[ROWS][COLS])
@@ -61,7 +79,7 @@ string formatString(string str)
 void solve(int usage[ROWS][COLS])
 {
 
-    cout << '|' << setfill('-') << setw(CELLSIZE) << "" << "|" << setfill('-') << setw(CELLSIZE) << "" << "|" << setfill('-') << setw(CELLSIZE) << "" << "|" << setfill('-') << setw(CELLSIZE) << "" << '|' << setfill('-') << setw(CELLSIZE) << "" << '|'<< endl;
+    cout << '|' << setfill('-') << setw(CELLSIZE) << "" << "|" << setfill('-') << setw(CELLSIZE) << "" << "|" << setfill('-') << setw(CELLSIZE) << "" << "|" << setfill('-') << setw(CELLSIZE) << "" << '|' << setfill('-') << setw(CELLSIZE) << "" << '|' << endl;
     cout << "|" << formatString("Lab 1") << "|";
     cout << formatString("Lab 2") << "|";
     cout << formatString("Lab 3") << "|";
@@ -76,21 +94,13 @@ void solve(int usage[ROWS][COLS])
             total += usage[j][i];
 
         stringstream ss;
-        ss << fixed << setprecision(2) << (double)total/ROWS;
+        ss << fixed << setprecision(2) << (double)total / ROWS;
         cout << formatString(ss.str()) << "|";
-        
+
     }
     cout << "\n";
     cout << '|' << setfill('-') << setw(CELLSIZE) << "" << "|" << setfill('-') << setw(CELLSIZE) << "" << "|" << setfill('-') << setw(CELLSIZE) << "" << "|" << setfill('-') << setw(CELLSIZE) << "" << '|' << setfill('-') << setw(CELLSIZE) << "" << '|' << endl;
 
 
-}
-
-int main()
-{
-    // init usage to 0
-    int usage[ROWS][COLS] = { 0 };
-    input(usage);
-    solve(usage);
 }
 
